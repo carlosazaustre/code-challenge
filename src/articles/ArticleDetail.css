@@ -1,0 +1,24 @@
+.ArticleDetail {
+  margin: 0 auto;
+}
+
+.ArticleDetail-author {
+  font-style: italic;
+  margin-left: 1em;
+}
+
+.ArticleDetail-text {
+  margin: 1em 1em 2em;
+}
+
+.ArticleDetail-tagList {
+  margin: 1em;
+  margin-left: 0;
+}
+
+.ArticleDetail-tag {
+  padding: 0.5em;
+  margin: 0.5em 0.5em 0.5em;
+  background-color: #eaeaea;
+  border-radius: 10px;
+}

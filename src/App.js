@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
+
 import request from './request';
 import { ARTICLES_QUERY } from './queries';
+
 import Header from './commons/Header';
 import Footer from './commons/Footer';
 import ArticleList from './articles/ArticleList';
+import ArticleDetail from './articles/ArticleDetail';
 
 class App extends Component {
   // definition
@@ -26,7 +33,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <ArticleList articles={this.state.articles} />
+        <Router>
+          <div>
+            <Route exact path="/" render={ props => <ArticleList articles={this.state.articles} /> } />
+            <Route path="/:id" component={ArticleDetail} />
+          </div>
+        </Router>
         <Footer />
       </div>
     );

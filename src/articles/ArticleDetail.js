@@ -9,8 +9,8 @@ class ArticleDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      article: {}
-    }
+      article: {},
+    };
   }
 
   // lifecycle
@@ -23,7 +23,6 @@ class ArticleDetail extends Component {
   // renders
   render() {
     const { author, content, tags } = this.state.article;
-    console.log(this.state.article);
 
     return (
       <article className="ArticleDetail">
@@ -32,14 +31,14 @@ class ArticleDetail extends Component {
         </div>
         <aside className="ArticleDetail-tagList">
           {
-            tags ? tags.map(tag => <span className="ArticleDetail-tag">{tag}</span>) : <span></span>
+            tags ? tags.map(tag => <span className="ArticleDetail-tag">{tag}</span>) : <span />
           }
         </aside>
         <div className="ArticleDetail-text">
           {content}
         </div>
       </article>
-    )
+    );
   }
 }
 

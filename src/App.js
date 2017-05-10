@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter as Router,
-  Route
-} from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 
 import request from './request';
 import { ARTICLES_QUERY } from './queries';
@@ -35,7 +32,7 @@ class App extends Component {
         <Header />
         <Router>
           <div>
-            <Route exact path="/" render={ props => <ArticleList articles={this.state.articles} /> } />
+            <Route exact path="/" render={() => <ArticleList articles={this.state.articles} />} />
             <Route path="/:id" component={ArticleDetail} />
           </div>
         </Router>
